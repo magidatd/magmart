@@ -2,6 +2,7 @@ import { ReactNode, useLayoutEffect } from 'react';
 import { BrowserRouter, Route, Routes, useLocation } from 'react-router-dom';
 import { Toaster } from 'sonner';
 import UserLayout from './components/layout/user-layout';
+import Home from './pages/home';
 
 const Wrapper = ({ children }: { children: ReactNode }) => {
 	const location = useLocation();
@@ -23,7 +24,12 @@ const App = () => {
 					<Route
 						path='/'
 						element={<UserLayout />}
-					></Route>
+					>
+						<Route
+							index
+							element={<Home />}
+						/>
+					</Route>
 				</Routes>
 			</Wrapper>
 		</BrowserRouter>

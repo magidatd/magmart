@@ -1,13 +1,19 @@
 import { Outlet } from 'react-router-dom';
+import Header from '@/components/ui/header';
+import Footer from '@/components/ui/footer';
 
 const UserLayout = () => {
 	return (
 		<>
 			{/* Header */}
+			<Header />
+			{/* Main */}
 			<main>
-				{/* Main content */}
+				{/* Content */}
 				<Outlet />
 			</main>
+			{/* Footer */}
+			<Footer />
 		</>
 	);
 };

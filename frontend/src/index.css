@@ -3,7 +3,19 @@
 @font-face {
 	font-family: Inter;
 	font-weight: 100 900;
-	src: url('/assets/fonts/inter/Inter-VariableFont_opsz,wght.ttf');
+	src: url('/src/assets/fonts/inter/Inter-VariableFont_opsz,wght.ttf');
+}
+
+@font-face {
+	font-family: JostItalic;
+	font-weight: 100 900;
+	src: url('/src/assets/fonts/Jost/Jost-Italic-VariableFont_wght.ttf');
+}
+
+@font-face {
+	font-family: Jost;
+	font-weight: 100 900;
+	src: url('/src/assets/fonts/Jost/Jost-VariableFont_wght.ttf');
 }
 
 :root {
@@ -20,9 +32,17 @@
 }
 
 @theme {
-	--magmart-red: hsl(9, 89%, 49%);
+	--magmart-red: hsl(240, 47%, 50%);
+	--magmart-banner-background: hsl(156, 12%, 8%);
 }
 
 @theme inline {
 	--color-magmart-red: var(--magmart-red);
+	--color-magmart-banner-background: var(--magmart-banner-background);
+}
+
+.font-jost-italic {
+	font-family: 'JostItalic', sans-serif;
+	font-optical-sizing: auto;
+	font-style: italic;
 }

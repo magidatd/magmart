@@ -1,7 +1,7 @@
 export const cartItems = [
 	{
 		productId: 1,
-		name: 'Essential Oversized T-shirt',
+		name: 'essential oversized t-shirt',
 		size: 'M',
 		colour: 'White',
 		quantity: 1,
@@ -10,7 +10,7 @@ export const cartItems = [
 	},
 	{
 		productId: 2,
-		name: 'Stories Floral Embroidered Blouse',
+		name: 'stories floral embroidered blouse',
 		size: 'XL',
 		colour: 'White',
 		quantity: 2,
@@ -19,7 +19,7 @@ export const cartItems = [
 	},
 	{
 		productId: 3,
-		name: '90s Oversized Linen Shirt in Ecru',
+		name: '90s oversized linen shirt in ecru',
 		size: 'S',
 		colour: 'White',
 		quantity: 4,
@@ -28,7 +28,7 @@ export const cartItems = [
 	},
 	{
 		productId: 4,
-		name: 'Salomon ACS + OG Trainers',
+		name: 'salomon acs + og trainers',
 		size: '6',
 		colour: 'Green',
 		quantity: 1,
@@ -37,7 +37,7 @@ export const cartItems = [
 	},
 	{
 		productId: 5,
-		name: 'Puffball Sequin Midi Dress',
+		name: 'puffball sequin midi dress',
 		size: 'M',
 		colour: 'Brown',
 		quantity: 1,
@@ -46,11 +46,11 @@ export const cartItems = [
 	},
 	{
 		productId: 6,
-		name: 'Skinny Wedding Suit',
+		name: 'skinny wedding suit',
 		size: 'M',
 		colour: 'Light Green',
 		quantity: 1,
-		price: 59.81,
+		price: 143.81,
 		image: 'src/assets/clothes/207454369-1-sagegreen.avif',
 	},
 ];

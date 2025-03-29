@@ -18,7 +18,7 @@ const Footer = () => {
 						Sign up and get 10% off on your first order.
 					</p>
 					{/* Newsletter Form */}
-					<form className='flex'>
+					<form className='flex md:hidden lg:flex'>
 						<input
 							type='email'
 							placeholder='Enter your email...'
@@ -146,6 +146,22 @@ const Footer = () => {
 					</p>
 				</div>
 			</div>
+			{/* Newsletter Form */}
+			<form className='hidden md:flex lg:hidden mx-6'>
+				<input
+					type='email'
+					placeholder='Enter your email...'
+					className='p-3 w-full text-sm border-t border-l border-b border-gray-300 rounded-l-md focus:outline-none 
+							focus:ring-2 focus:ring-gray-50 transition-all'
+					required
+				/>
+				<button
+					type='submit'
+					className='bg-black text-white px-6 text-sm rounded-r-md hover:bg-gray-800 transition-all'
+				>
+					Subscribe
+				</button>
+			</form>
 			{/* Footer Bottom */}
 			<div className='container mx-auto mt-12 px-4 lg:px-0 border-t border-gray-200 pt-6'>
 				<p className='text-gray-500 text-sm tracking-tighter text-center'>

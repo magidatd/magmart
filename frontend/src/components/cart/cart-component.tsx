@@ -21,7 +21,7 @@ const CartComponent = () => {
 						<div className='w-full'>
 							<div className='flex items-center justify-between gap-2'>
 								<div className='float-start min-w-2/3'>
-									<h3>{product.name}</h3>
+									<h3 className='capitalize'>{product.name}</h3>
 									<p className='text-sm text-gray-500'>
 										size: {product.size} | colour: {product.colour}
 									</p>

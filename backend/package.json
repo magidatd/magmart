@@ -12,6 +12,9 @@
 	"license": "MIT",
 	"packageManager": "pnpm@10.6.4",
 	"devDependencies": {
+		"@types/cors": "^2.8.17",
+		"@types/express": "^5.0.1",
+		"@types/jsonwebtoken": "^9.0.9",
 		"@types/node": "^22.13.14",
 		"nodemon": "^3.1.9",
 		"ts-node": "^10.9.2",

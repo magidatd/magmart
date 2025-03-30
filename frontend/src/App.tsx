@@ -7,6 +7,8 @@ import AuthLayout from '@/components/auth/auth-layout';
 import Login from '@/pages/auth/login';
 import Register from '@/pages/auth/register';
 import Profile from '@/pages/profile';
+import OrderDetails from '@/pages/order-details';
+import Orders from './pages/orders';
 
 const Wrapper = ({ children }: { children: ReactNode }) => {
 	const location = useLocation();
@@ -36,6 +38,14 @@ const App = () => {
 						<Route
 							path='/profile'
 							element={<Profile />}
+						/>
+						<Route
+							path='/orders'
+							element={<Orders />}
+						/>
+						<Route
+							path='/order/:id'
+							element={<OrderDetails />}
 						/>
 					</Route>
 					<Route

@@ -119,3 +119,14 @@ export const newArrivals = [
 		],
 	},
 ];
+
+export const featuredCollection = {
+	header1: 'Comfort and Style',
+	header2: 'Apparel made for your everyday life',
+	paragraph:
+		'Discover high quality, comfortable clothing that effortlessly blends fashion and function. designed to make you look and feel great everyday.',
+	image: {
+		url: 'src/assets/hero/burgess-milner-OYYE4g-I5ZQ-unsplash.avif',
+		alt: 'Featured Collection',
+	},
+};

@@ -51,9 +51,9 @@ const ProductDetails = () => {
 	return (
 		<div className='p-6'>
 			<div className='max-w-6xl mx-auto bg-white p-8 rounded-lg'>
-				<div className='flex flex-col md:flex-row'>
+				<div className='flex flex-col md:flex-row lg:flex-row'>
 					{/* Left Thumbnails */}
-					<div className='hidden md:flex flex-col space-y-4 mr-4'>
+					<div className='hidden lg:flex flex-col space-y-4 mr-4'>
 						{selectedProduct.images.map((image, index) => (
 							<img
 								key={index}
@@ -68,31 +68,33 @@ const ProductDetails = () => {
 					</div>
 					{/* Main Image */}
 					<div className='md:w-1/2'>
-						<div className='mb-4'>
-							<img
-								src={mainImage}
-								alt='Main Product'
-								className='w-full h-auto object-cover rounded-lg'
-							/>
+						<div>
+							<div className='mb-4'>
+								<img
+									src={mainImage}
+									alt='Main Product'
+									className='w-full h-auto object-cover rounded-lg'
+								/>
+							</div>
 						</div>
-					</div>
-					{/* Mobile Thumbnails */}
-					<div className='md:hidden flex overflow-x-scroll space-x-4 mb-4'>
-						{selectedProduct.images.map((image, index) => (
-							<img
-								key={index}
-								src={image.url}
-								alt={image.altText || `Thumbnail ${index}`}
-								onClick={() => setMainImage(image.url)}
-								className={`h-20 w-20 object-cover rounded-lg cursor-pointer border ${
-									mainImage === image.url ? 'border-black' : 'border-gray-300'
-								}`}
-							/>
-						))}
+						{/* Mobile Thumbnails */}
+						<div className='lg:hidden flex overflow-x-scroll space-x-2 mb-4 flex-wrap space-y-2'>
+							{selectedProduct.images.map((image, index) => (
+								<img
+									key={index}
+									src={image.url}
+									alt={image.altText || `Thumbnail ${index}`}
+									onClick={() => setMainImage(image.url)}
+									className={`h-20 w-20 object-cover rounded-lg cursor-pointer border ${
+										mainImage === image.url ? 'border-black' : 'border-gray-300'
+									}`}
+								/>
+							))}
+						</div>
 					</div>
 
 					{/* Right Section */}
-					<div className='md:w-1/2 md:ml-10'>
+					<div className='md:w-1/2 md:ml-5 lg:ml-10'>
 						<h1 className='text-2xl md:text-3xl font-semibold mb-2'>
 							{selectedProduct.name}
 						</h1>
@@ -125,7 +127,7 @@ const ProductDetails = () => {
 						{/* Sizes */}
 						<div className='mb-4'>
 							<p className='text-gray-700'>Size:</p>
-							<div className='flex gap-2 mt-2'>
+							<div className='flex flex-wrap gap-2 mt-2'>
 								{selectedProduct.sizes.map((size) => (
 									<button
 										key={size}

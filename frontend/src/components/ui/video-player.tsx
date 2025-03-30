@@ -18,7 +18,7 @@ interface VideoPlayerProps {
 }
 
 const VideoPlayer: React.FC<VideoPlayerProps> = ({ heroData }) => {
-	const isMobile = useIsMobile();
+	const isMobile = useIsMobile(769);
 
 	const videoRef = useRef<HTMLVideoElement | null>(null);
 	const [isPlaying, setIsPlaying] = useState(false);

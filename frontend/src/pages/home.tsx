@@ -2,7 +2,6 @@ import FeaturedCollections from '@/components/home/featured-collections';
 import FeaturesSection from '@/components/home/features-section';
 import FlexibleBanner from '@/components/home/flexible-banner';
 import GenderCollectionSection from '@/components/home/gender-collection-section';
-import GlobalBanner from '@/components/home/global-banner';
 import Hero from '@/components/home/hero';
 import NewArrivals from '@/components/home/new-arrivals';
 import ProductDetails from '@/components/products/product-details';
@@ -13,7 +12,6 @@ import { placeholderProducts } from '@/data/products';
 const Home = () => {
 	return (
 		<div>
-			<GlobalBanner />
 			<FlexibleBanner />
 			<Hero />
 			<GenderCollectionSection collections={collectionData} />

@@ -29,7 +29,7 @@ const CartComponent = () => {
 
 								<div className='items-end min-w-1/3 flex'>
 									<div className='w-full justify-end flex flex-col md:flex-row items-center md:gap-2'>
-										<p>$ {product.price}</p>
+										<p>$ {product.price * product.quantity}</p>
 										<button>
 											<RiDeleteBin3Line className='h-6 w-6 mt-2 text-red-600' />
 										</button>

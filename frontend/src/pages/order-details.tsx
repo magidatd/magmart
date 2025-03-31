@@ -195,7 +195,7 @@ const OrderDetails = () => {
 											<img
 												src={item.image}
 												alt={item.name}
-												className='w-12 h-12 object-cover rounded-lg mr-4
+												className='w-12 h-12 object-scale-down rounded-lg mr-4
                                                 '
 											/>
 											<Link

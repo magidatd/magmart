@@ -5,7 +5,6 @@ const useIsMobile = (MOBILE_BREAKPOINT = 768) => {
 
 	useEffect(() => {
 		const mql = window.matchMedia(`(max-width: ${MOBILE_BREAKPOINT - 1}px)`);
-		console.log(mql);
 
 		const onChange = () => {
 			setIsMobile(window.innerWidth < MOBILE_BREAKPOINT);
@@ -19,8 +18,6 @@ const useIsMobile = (MOBILE_BREAKPOINT = 768) => {
 			mql.removeEventListener('change', onChange);
 		};
 	}, [MOBILE_BREAKPOINT]);
-
-	console.log({ isMobile: isMobile });
 
 	return isMobile;
 };

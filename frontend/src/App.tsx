@@ -8,7 +8,8 @@ import Login from '@/pages/auth/login';
 import Register from '@/pages/auth/register';
 import Profile from '@/pages/profile';
 import OrderDetails from '@/pages/order-details';
-import Orders from './pages/orders';
+import Orders from '@/pages/orders';
+import Checkout from '@/pages/checkout';
 
 const Wrapper = ({ children }: { children: ReactNode }) => {
 	const location = useLocation();
@@ -46,6 +47,10 @@ const App = () => {
 						<Route
 							path='/order/:id'
 							element={<OrderDetails />}
+						/>
+						<Route
+							path='/checkout'
+							element={<Checkout />}
 						/>
 					</Route>
 					<Route

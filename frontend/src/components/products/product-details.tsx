@@ -60,7 +60,7 @@ const ProductDetails = () => {
 								src={image.url}
 								alt={image.altText || `Thumbnail ${index}`}
 								onClick={() => setMainImage(image.url)}
-								className={`h-20 w-20 object-cover rounded-lg cursor-pointer border ${
+								className={`h-20 w-20 object-scale-down rounded-lg cursor-pointer border ${
 									mainImage === image.url ? 'border-black' : 'border-gray-300'
 								}`}
 							/>
@@ -85,7 +85,7 @@ const ProductDetails = () => {
 									src={image.url}
 									alt={image.altText || `Thumbnail ${index}`}
 									onClick={() => setMainImage(image.url)}
-									className={`h-20 w-20 object-cover rounded-lg cursor-pointer border ${
+									className={`h-20 w-20 object-scale-down rounded-lg cursor-pointer border ${
 										mainImage === image.url ? 'border-black' : 'border-gray-300'
 									}`}
 								/>

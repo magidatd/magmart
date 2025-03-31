@@ -40,7 +40,7 @@ const ProductDetails: React.FC<ProductDetailsProps> = ({
 		if (selectedProduct?.images?.length > 0) {
 			setMainImage(selectedProduct.images[0].url);
 		}
-	}, []);
+	}, [selectedProduct.images]);
 
 	const handleQuantityChange = (action: 'plus' | 'minus') => {
 		if (action === 'plus') {

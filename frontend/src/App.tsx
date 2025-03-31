@@ -10,6 +10,7 @@ import Profile from '@/pages/profile';
 import OrderDetails from '@/pages/order-details';
 import Orders from '@/pages/orders';
 import Checkout from '@/pages/checkout';
+import Product from '@/pages/product';
 
 const Wrapper = ({ children }: { children: ReactNode }) => {
 	const location = useLocation();
@@ -51,6 +52,10 @@ const App = () => {
 						<Route
 							path='/checkout'
 							element={<Checkout />}
+						/>
+						<Route
+							path='/product/:id'
+							element={<Product />}
 						/>
 					</Route>
 					<Route

@@ -1,4 +1,3 @@
-import { selectedProduct, similarProducts } from '@/data/products';
 import { useEffect, useState } from 'react';
 import { PiMinus, PiPlus } from 'react-icons/pi';
 import { toast } from 'sonner';
@@ -6,7 +5,31 @@ import { toast } from 'sonner';
 import placeholderImg from '@/assets/placeholder.png';
 import ProductGrid from '@/components/products/product-grid';
 
-const ProductDetails = () => {
+interface ProductDetailsProps {
+	selectedProduct: {
+		name: string;
+		price: number;
+		originalPrice: number;
+		description: string;
+		brand: string;
+		material: string;
+		sizes: string[];
+		colours: string[];
+		images: { url: string; altText: string }[];
+	};
+	similarProducts: {
+		id: string;
+		name: string;
+		price: number;
+		image: string;
+		altText: string;
+	}[];
+}
+
+const ProductDetails: React.FC<ProductDetailsProps> = ({
+	selectedProduct,
+	similarProducts,
+}) => {
 	const [mainImage, setMainImage] = useState(placeholderImg);
 	const [selectedSize, setSelectedSize] = useState('');
 	const [selectedColour, setSelectedColour] = useState('');

@@ -7,7 +7,11 @@ import NewArrivals from '@/components/home/new-arrivals';
 import ProductDetails from '@/components/products/product-details';
 import ProductGrid from '@/components/products/product-grid';
 import { collectionData, newArrivals } from '@/data/home-data';
-import { placeholderProducts } from '@/data/products';
+import {
+	placeholderProducts,
+	selectedProduct,
+	similarProducts,
+} from '@/data/products';
 
 const Home = () => {
 	return (
@@ -18,7 +22,10 @@ const Home = () => {
 			<NewArrivals newArrivals={newArrivals} />
 
 			<h2 className='text-3xl text-center font-bold mb-4'>Best Seller</h2>
-			<ProductDetails />
+			<ProductDetails
+				selectedProduct={selectedProduct}
+				similarProducts={similarProducts}
+			/>
 
 			<div className='container mx-auto'>
 				<h2 className='text-3xl text-center font-bold mb-4'>Top Wears For Women</h2>

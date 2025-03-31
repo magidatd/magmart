@@ -179,10 +179,10 @@ const OrderDetails = () => {
 						<table className='min-w-full text-gray-600 mb-4'>
 							<thead className='bg-gray-100'>
 								<tr>
-									<th className='py-2 px-4'>Name</th>
-									<th className='py-2 px-4'>Unit Price</th>
-									<th className='py-2 px-4'>Quantity</th>
-									<th className='py-2 px-4'>Total</th>
+									<th className='py-2 px-4 text-start'>Name</th>
+									<th className='py-2 px-4 text-start'>Unit Price</th>
+									<th className='py-2 px-4 text-start'>Quantity</th>
+									<th className='py-2 px-4 text-start'>Total</th>
 								</tr>
 							</thead>
 							<tbody>

@@ -15,6 +15,10 @@ import CollectionsPage from '@/pages/collections-page';
 import OrderConfirmation from '@/pages/order-confirmation';
 import AdminLayout from '@/components/admin/layout/admin-layout';
 import AdminHome from '@/pages/admin/admin-home';
+import UserManagement from '@/pages/admin/user-management';
+import ProductMangement from '@/pages/admin/product-management';
+import EditProduct from '@/pages/admin/edit-product';
+import OrderManagement from '@/pages/admin/order-management';
 
 const Wrapper = ({ children }: { children: ReactNode }) => {
 	const location = useLocation();
@@ -42,31 +46,31 @@ const App = () => {
 							element={<Home />}
 						/>
 						<Route
-							path='/profile'
+							path='profile'
 							element={<Profile />}
 						/>
 						<Route
-							path='/orders'
+							path='orders'
 							element={<Orders />}
 						/>
 						<Route
-							path='/order/:id'
+							path='order/:id'
 							element={<OrderDetails />}
 						/>
 						<Route
-							path='/checkout'
+							path='checkout'
 							element={<Checkout />}
 						/>
 						<Route
-							path='/product/:id'
+							path='product/:id'
 							element={<Product />}
 						/>
 						<Route
-							path='/collections/:collection'
+							path='collections/:collection'
 							element={<CollectionsPage />}
 						/>
 						<Route
-							path='/order-confirmation'
+							path='order-confirmation'
 							element={<OrderConfirmation />}
 						/>
 					</Route>
@@ -90,6 +94,22 @@ const App = () => {
 						<Route
 							index
 							element={<AdminHome />}
+						/>
+						<Route
+							path='users'
+							element={<UserManagement />}
+						/>
+						<Route
+							path='products'
+							element={<ProductMangement />}
+						/>
+						<Route
+							path='products/:id/edit'
+							element={<EditProduct />}
+						/>
+						<Route
+							path='orders'
+							element={<OrderManagement />}
 						/>
 					</Route>
 				</Routes>

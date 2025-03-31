@@ -92,3 +92,42 @@ export const checkout = {
 		country: 'Zimbabwe',
 	},
 };
+
+export const orders = [
+	{
+		id: '451122',
+		user: { name: 'John Doe' },
+		totalPrice: 111,
+		status: 'Processing',
+	},
+	{
+		id: '451123',
+		user: { name: 'Jin Moyo' },
+		totalPrice: 174,
+		status: 'Processing',
+	},
+	{
+		id: '451124',
+		user: { name: 'Rob Kyes' },
+		totalPrice: 140,
+		status: 'Processing',
+	},
+	{
+		id: '451125',
+		user: { name: 'Hebert Gondo' },
+		totalPrice: 114,
+		status: 'Processing',
+	},
+	{
+		id: '451126',
+		user: { name: 'Elvira Ralston' },
+		totalPrice: 142,
+		status: 'Processing',
+	},
+	{
+		id: '451127',
+		user: { name: 'John Donker' },
+		totalPrice: 114,
+		status: 'Processing',
+	},
+];

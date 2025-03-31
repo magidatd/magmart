@@ -64,3 +64,36 @@ export const orders = [
 		status: 'Cancelled',
 	},
 ];
+
+export const users = [
+	{
+		id: '23114',
+		name: 'John Doe',
+		email: 'jdoe@example.com',
+		role: 'admin',
+	},
+	{
+		id: '32145',
+		name: 'Mike Hondo',
+		email: 'mhondo@example.com',
+		role: 'customer',
+	},
+	{
+		id: '23155',
+		name: 'Mary Kay',
+		email: 'mkay@example.com',
+		role: 'customer',
+	},
+	{
+		id: '23177',
+		name: 'Susan Gondo',
+		email: 'sgondo@example.com',
+		role: 'customer',
+	},
+	{
+		id: '231444',
+		name: 'Jim Hove',
+		email: 'jhove@example.com',
+		role: 'admin',
+	},
+];

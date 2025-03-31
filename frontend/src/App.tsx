@@ -13,7 +13,7 @@ import Checkout from '@/pages/checkout';
 import Product from '@/pages/product';
 import CollectionsPage from '@/pages/collections-page';
 import OrderConfirmation from '@/pages/order-confirmation';
-import AdminLayout from "@/components/admin/layout/admin-'layout";
+import AdminLayout from '@/components/admin/layout/admin-layout';
 import AdminHome from '@/pages/admin/admin-home';
 
 const Wrapper = ({ children }: { children: ReactNode }) => {

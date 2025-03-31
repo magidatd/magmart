@@ -11,6 +11,10 @@ import OrderDetails from '@/pages/order-details';
 import Orders from '@/pages/orders';
 import Checkout from '@/pages/checkout';
 import Product from '@/pages/product';
+import CollectionsPage from '@/pages/collections-page';
+import OrderConfirmation from '@/pages/order-confirmation';
+import AdminLayout from "@/components/admin/layout/admin-'layout";
+import AdminHome from '@/pages/admin/admin-home';
 
 const Wrapper = ({ children }: { children: ReactNode }) => {
 	const location = useLocation();
@@ -57,6 +61,14 @@ const App = () => {
 							path='/product/:id'
 							element={<Product />}
 						/>
+						<Route
+							path='/collections/:collection'
+							element={<CollectionsPage />}
+						/>
+						<Route
+							path='/order-confirmation'
+							element={<OrderConfirmation />}
+						/>
 					</Route>
 					<Route
 						path='/auth'
@@ -69,6 +81,15 @@ const App = () => {
 						<Route
 							path='register'
 							element={<Register />}
+						/>
+					</Route>
+					<Route
+						path='/admin'
+						element={<AdminLayout />}
+					>
+						<Route
+							index
+							element={<AdminHome />}
 						/>
 					</Route>
 				</Routes>

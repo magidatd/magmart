@@ -1,3 +1,4 @@
+import { mockOrders } from '@/data/orders';
 import { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 
@@ -23,35 +24,6 @@ const MyOrders = () => {
 	useEffect(() => {
 		// Simulate fetching orders
 		setTimeout(() => {
-			const mockOrders = [
-				{
-					id: '12445',
-					createdAt: new Date(),
-					shippingAddress: { city: 'Masvingo', country: 'Zimbabwe' },
-					orderItems: [
-						{
-							name: 'Blue Cargo Jeans',
-							image: 'src/assets/clothes/377787_main.avif',
-						},
-					],
-					totalPrice: 120,
-					isPaid: true,
-				},
-				{
-					id: '12578',
-					createdAt: new Date(),
-					shippingAddress: { city: 'Masvingo', country: 'Zimbabwe' },
-					orderItems: [
-						{
-							name: 'Grey Cuffed Cargo Trousers',
-							image: 'src/assets/clothes/377582_main.avif',
-						},
-					],
-					totalPrice: 40,
-					isPaid: true,
-				},
-			];
-
 			setOrders(mockOrders);
 		}, 1000);
 	}, []);

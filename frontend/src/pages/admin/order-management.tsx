@@ -15,8 +15,8 @@ const OrderManagement = () => {
 							<th className='py-3 px-4'>Order Id</th>
 							<th className='py-3 px-4'>Customer</th>
 							<th className='py-3 px-4'>Total Price</th>
-							<th className='py-3 px-4'>Status</th>
-							<th className='py-3 px-4'>Actions</th>
+							<th className='py-3 px-4 hidden md:block'>Status</th>
+							<th className='py-3 px-4 hidden md:block'>Actions</th>
 						</tr>
 					</thead>
 					<tbody>
@@ -31,7 +31,7 @@ const OrderManagement = () => {
 									</td>
 									<td className='p-4'>{order.user.name}</td>
 									<td className='p-4'>${order.totalPrice}</td>
-									<td className='p-4'>
+									<td className='hidden md:block p-4'>
 										<select
 											value={order.status}
 											onChange={(e) => handleStatusChange(order.id, e.target.value)}
@@ -44,7 +44,7 @@ const OrderManagement = () => {
 											<option value='Cancelled'>Cancelled</option>
 										</select>
 									</td>
-									<td className='p-4'>
+									<td className='p-4 hidden md:block'>
 										<button
 											onClick={() => {
 												handleStatusChange(order.id, 'Delivered');

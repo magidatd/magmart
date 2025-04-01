@@ -1,9 +1,19 @@
+import React, { Dispatch, SetStateAction, useEffect } from 'react';
 import { FaSignOutAlt } from 'react-icons/fa';
 import { FaBoxOpen, FaClipboardList, FaStore, FaUser } from 'react-icons/fa6';
-import { Link, NavLink, useNavigate } from 'react-router-dom';
+import { Link, NavLink, useLocation, useNavigate } from 'react-router-dom';
 
-const AdminSidebar = () => {
+interface AdminSidebarProps {
+	setIsSidebarOpen: Dispatch<SetStateAction<boolean>>;
+}
+
+const AdminSidebar: React.FC<AdminSidebarProps> = ({ setIsSidebarOpen }) => {
 	const navigate = useNavigate();
+	const { pathname } = useLocation();
+
+	useEffect(() => {
+		setIsSidebarOpen(false);
+	}, [pathname, setIsSidebarOpen]);
 
 	const handleLogout = () => {
 		navigate('/');
@@ -16,7 +26,7 @@ const AdminSidebar = () => {
 					to='/admin'
 					className='text-2xl font-medium'
 				>
-					Rabbit
+					MagMart
 				</Link>
 			</div>
 			<h2 className='text-xl font-medium mb-6 text-center'>Admin Dashboard</h2>

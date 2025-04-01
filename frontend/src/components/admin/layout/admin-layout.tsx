@@ -43,7 +43,7 @@ const AdminLayout = () => {
 					isSidebarOpen ? 'translate-x-0' : '-translate-x-full'
 				} transition-transform md:translate-x-0 md:transition-all fixed z-20 duration-300`}
 			>
-				<AdminSidebar />
+				<AdminSidebar setIsSidebarOpen={setIsSidebarOpen} />
 			</div>
 
 			<div

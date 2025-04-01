@@ -17,8 +17,8 @@ const ProductMangement = () => {
 						<tr>
 							<th className='py-3 px-4'>Name</th>
 							<th className='py-3 px-4'>Price</th>
-							<th className='py-3 px-4'>Sku</th>
-							<th className='py-3 px-4'>Actions</th>
+							<th className='py-3 px-4 max-sm:hidden'>Sku</th>
+							<th className='py-3 px-4 max-sm:hidden'>Actions</th>
 						</tr>
 					</thead>
 					<tbody>
@@ -32,14 +32,14 @@ const ProductMangement = () => {
 										<img
 											src={product.image}
 											alt={product.altText}
-											className='w-12 h-12 object-scale-down rounded-lg mr-4
+											className='hidden md:block w-12 h-12 object-scale-down rounded-lg mr-4
                                                 '
 										/>
-										<span className='whitespace-nowrap'>{product.name}</span>
+										<span className='text-wrap md:whitespace-nowrap'>{product.name}</span>
 									</td>
 									<td className='p-4'>${product.price}</td>
-									<td className='p-4'>{product.sku}</td>
-									<td className='p-4'>
+									<td className='p-4 max-sm:hidden'>{product.sku}</td>
+									<td className='p-4 max-sm:hidden'>
 										<Link
 											to={`/admin/products/${product.id}/edit`}
 											className='bg-yellow-500 text-white px-2 py-1 rounded mr-2 hover:bg-yellow-600'
